@@ -2,7 +2,7 @@ require 'fix/protocol/messages'
 
 module Fix
   module Protocol
-    
+
     #
     # Maps the FIX message type codes to message classes
     #
@@ -20,12 +20,13 @@ module Fix
         'V' => :market_data_request,
         'W' => :market_data_snapshot,
         'X' => :market_data_incremental_refresh,
-        'j' => :business_message_reject
+        'j' => :business_message_reject,
+        'D' => :new_order
       }
 
       #
       # Returns the message class associated to a message code
-      # 
+      #
       # @param msg_type [Integer] The FIX message type code
       # @return [Class] The FIX message class
       #
